@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript can change image attribute</h1>
+    <button onclick="document.getElementById('myImage').src='./pic_bulboff.gif'">turns off light</button>
+    <img id="myImage" src="./pic_bulboff.gif" style="width:100px">
+    <button onclick="document.getElementById('myImage').src='./pic_bulbon.gif'">turns on light</button>
+    <p id="date"></p>
+    <button onclick="document.getElementById('date').innerHTML=Date()">click here to show toyas date</button>
+</body>
+</html>
