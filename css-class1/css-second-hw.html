@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Styling Links".</title>
+    <style>
+        .one,.two{
+            color: red;
+        }
+        .one,.two:visited{
+            color: blue;
+        }
+        .one:hover{
+            color: orange;
+        }
+        .two:hover{
+            font-size: 150%;
+        }
+        .three{
+            color: red;
+            text-decoration: none;
+        }
+        .three:visited{
+            color: red;
+            text-decoration: none;
+        }
+        .three:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>"Styling Links"</h2>
+    <p>Mouse over the links and watch them change layout</p>
+    <p><b><a class="one" href="#" target="_blank">This link changes color</a></b></p>
+    <p><b><a class="two" href="#" target="_blank">This link changes font-size</a></b></p>
+    <p><b><a class="three" href="#" target="_blank">This link changes text-decoration</a></b></p>
+
+</body>
+</html>

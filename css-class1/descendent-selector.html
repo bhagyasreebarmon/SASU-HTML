@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>descendent selector and pseudo class</title>
+    <style>
+           div{
+            background-color: green;
+            padding: 25px;
+            color: white;
+            text-align: center;
+        }
+        div.hover{
+        background-color: #3a06be !important;
+        padding: 25px;
+        color: yellow;
+        }
+        /* unvisited link */
+        /* a:link{
+            color: red;
+        } */
+        /* visited link color */
+        /* a:visited{
+            color: purple;
+        } */
+        /* mouse hover color : hover must be a:link and
+        visited link er pore hobe noyto thik moto kaj korbena */
+        /* a:hover{
+            color: hotpink;
+        } */
+        /* activated link color */
+        /* a:active{
+            color: rgb(13, 217, 98);
+        } */
+        /* css class and html classes start */
+        /* .aa:hover{
+            color: #ff0000;
+            font-size: 22px;
+        } */
+        h2{
+            background-color: yellow;
+            padding: 20px;
+            text-align: center;
+
+        }
+        p::first-letter{
+            color: red;
+            font-size: xx-large;
+        }
+        p::first-line{
+            color: blue;
+            font-variant: small-caps;
+        }
+     
+
+    </style>
+</head>
+<body>
+    <h2>
+        pseudo-classes and HTML classes
+    </h2>
+    <!-- <p><b><a href="sasu.html" target="_blank">This is a link</a></b></p> -->
+    <!-- <p><a class="aa" href="丽丽+202310531831-1.html" target="_blank">CSS syntax</a></p>
+    <p><a href="丽丽+202310531831-2.html"target="_blank">CSS comments</a></p>
+    <div>mouse hover me</div> -->
+    <p>you can combine the ::first letter and ::first line pseudo element to add a special effect to the first letter and first line of a text!!!</p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>loginweb9 - 202310531830 Maruf(曦恒)</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-form {
+      width: 370px;
+    }
+
+    fieldset {
+     border: 1px solid #89A4FD;
+     padding: 15px 15px 40px 15px;
+     margin: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+
+    legend {
+      font-size: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      width: 100px;
+      text-align: right;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      flex: 1;
+      padding: 5px;
+      border: 1px solid #ccc;
+      width: 180px;
+    }
+
+    .radio-group {
+      margin: 1px 0;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    #autologin{
+        margin-left: 10px;
+    }
+    .form-buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      padding: 5px 15px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      background-color: #f0f0f0;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+
+    button:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <!-- <div class="login-container"> -->
+    <form class="login-form">
+      <fieldset>
+        <legend>Login page</legend>
+        <div class="form-group">
+          <label for="username">username:</label>
+          <input type="text" id="username" name="username">
+        </div>
+        <div class="form-group">
+          <label for="password">password:</label>
+          <input type="password" id="password" name="password">
+        </div>
+        <div class="radio-group">
+          <label>Type:</label>
+          <input type="radio" id="admin" name="type" value="administrator">
+          <label for="admin">administrator</label>
+          <input type="radio" id="user" name="type" value="users">
+          <label for="user">users</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="remember" name="remember">
+          <label for="remember">Remember password</label>
+          <input type="checkbox" id="autologin" name="autologin">
+          <label for="autologin">automatic login</label>
+        </div>
+        <div class="form-buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </fieldset>
+    </form>
+  <!-- </div> -->
+</body>
+</html>

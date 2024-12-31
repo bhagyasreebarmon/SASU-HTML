@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Navigation Bar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightgreen;
+}
+/* top-header */
+.header{
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+}
+.my-website{
+    margin-bottom:15px ;
+}
+.header .my-website,.right-web{
+    color: black;
+}
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .logo a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+/* Container */
+.container {
+    display: flex;
+    gap: 20px;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* Left Column */
+.left-column {
+  width: 60%; 
+  padding-right: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #333;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.card button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #555;
+}
+
+/* Hover effect for card */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for different screen sizes */
+
+/* Desktop (large screens > 1024px) */
+@media screen and (min-width: 1024px) {
+  .left-column {
+    width: 60%; 
+  }
+
+  .card {
+    width: 100%; 
+  }
+}
+
+/* Tablet (medium screens: 768px to 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .left-column,.right-column{
+  }
+  
+  .card {
+    width: 100%;
+  }
+}
+
+/* Small Tablet or Portrait Tablet (small screens: 480px to 768px) */
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  .left-column,.right-column {
+    width: 100%; /* Full width of the container */
+    padding-right: 0;
+  }
+
+  .card {
+    width: 100%; /* Full width of the column */
+    margin-bottom: 15px; /* Less margin between cards */
+  }
+}
+
+/* Mobile (very small screens <= 480px) */
+@media screen and (max-width: 480px) {
+    .left-column,.right-column {
+    width: 100%; /* Full width of the container */
+    padding-right: 0;
+  }
+  .card h3 {
+    font-size: 20px; /* Smaller font size on mobile */
+  }
+
+  .card p {
+    font-size: 14px; /* Smaller paragraph text */
+  }
+
+  .card button {
+    font-size: 14px; /* Smaller button text */
+  }
+}
+
+/* Right Column */
+.right-column {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%;
+}
+
+.right-column h2 {
+  margin-bottom: 10px;
+}
+
+.right-column p {
+  font-size: 16px;
+}
+.four-img {
+    margin-top: 20px;
+    background-color: #d3d3d3;
+    padding: 20px;
+}
+.four-img ul li {
+    list-style: none;
+    padding: 20px 0;
+}
+.follow-me {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+}
+.follow-me h3 {
+    margin-bottom: 20px;
+}
+.about-me {
+    background-color: white;
+    padding: 20px;
+}
+p {
+    margin-top: 20px;
+}
+
+
+
+/* footer */
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows wrapping of sections on smaller screens */
+}
+
+.footer-section {
+  width: 22%; /* Default width for each section */
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 14px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+/* Responsive Design for different screen sizes */
+
+/* Desktop (large screens > 1024px) */
+@media screen and (min-width: 1024px) {
+  .footer-section {
+    width: 22%; /* Each section takes up 22% of the footer container width */
+  }
+}
+
+/* Tablet (medium screens: 768px to 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .footer-section {
+    width: 48%; /* Each section takes up 48% of the footer container width */
+  }
+}
+
+/* Small Tablet (small screens: 480px to 768px) */
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  .footer-section {
+    width: 100%; /* Each section takes up full width */
+  }
+}
+
+/* Mobile (very small screens <= 480px) */
+@media screen and (max-width: 480px) {
+  footer {
+    padding: 20px 10px; /* Reduced padding for mobile */
+  }
+
+  .footer-section h3 {
+    font-size: 16px; /* Smaller heading text */
+  }
+
+  .footer-section p,
+  .footer-section ul {
+    font-size: 12px; /* Smaller text */
+  }
+}
+</style>
+<body>
+<div class="header">
+    <div class="my-website">
+        <h2>My Website</h2>
+    </div>
+    <div class="right-web">
+        This is my website
+    </div>
+</div>
+  <nav class="navbar">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="left-column">
+        <div class="card">
+            <h3>TITLE HEADING</h3>
+            <p>This is the content of the first card. 
+            </p>
+            <a href="https://ibb.co/yyXWcPT"><img src="https://i.ibb.co/J7K5wtL/DCAA5-EF244-F85-FE99374-E35016-B45919.jpg" alt="DCAA5-EF244-F85-FE99374-E35016-B45919" border="0"></a>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat deserunt autem quis quidem, consectetur, dolorum odit commodi sint minima impedit praesentium quia adipisci, itaque atque voluptates officia. Fuga minus aspernatur accusamus consectetur placeat tenetur iste ratione dolorum nemo, minima ad voluptas non quasi accusantium impedit dignissimos eligendi praesentium autem quia!
+            </p>
+          </div>
+          <div class="card">
+            <h3>TITLE HEADING</h3>
+            <p>This is the content of the second card.
+            </p>
+            <a href="https://ibb.co/QFxGYsZ"><img src="https://i.ibb.co/BVYRT8m/cat.jpg" alt="cat" border="0" ></a>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quisquam sequi nihil maiores consequatur ex commodi possimus omnis expedita quaerat delectus, rem aperiam labore. Atque sapiente neque ad libero voluptatibus perferendis optio adipisci reprehenderit ullam. Voluptates odio ea omnis beatae, ipsum molestiae cumque minima dolores corrupti quas non, reiciendis maxime?
+            </p>
+          </div>
+    </div>
+    <div class="right-column">
+        <!-- about me -->
+        <div class="about-me">
+            <h2>About Me</h2>
+            <a class="r-img" href="https://ibb.co/QFxGYsZ"><img src="https://i.ibb.co/BVYRT8m/cat.jpg" alt="cat" border="0" width="400"></a>
+            <p> ullam aut libero autem consectetur quas maxime. Consequatur, dolores? Rem alias maiores molestias ex expedita ea harum error aperiam quidem, veniam mollitia fugiat. Beatae eum mollitia tempora ut saepe sit officia ducimus facere fugiat!</p>
+        </div>
+
+        <div class="four-img">
+            <ul>
+                <li>image</li>
+                <li>image</li>
+                <li>image</li>
+                <li>image</li>
+            </ul>
+        </div>
+
+        <div class="follow-me">
+            <h3>FOLLOW ME</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta officiis quasi vitae, accusamus architecto aspernatur voluptates adipisci velit ullam labore.</p>
+        </div>
+      
+
+    </div>
+
+    
+  </div>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li>Web Design</li>
+          <li>SEO</li>
+          <li>App Development</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: info@example.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li>Facebook</li>
+          <li>Twitter</li>
+          <li>Instagram</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

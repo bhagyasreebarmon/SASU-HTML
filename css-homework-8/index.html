@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <label for="fname">First Name</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="quantity">Quantity Between 1 to 5</label><br>
+        <input type="number" id="quantity" name="quantity" min="1" max="5"><br>
+        <label for="vol">Volume (between 0 to 5o)</label><br>
+        <input type="range" id="vol" name="vol" min="0" max="50"><br>
+        <label for="country-code">Country Code</label><br>
+        <input type="text" id="country-code" name="country-code"  pattern="[a-Za-z]{3}" placeholder="CHN"><br>
+        <label for="points">points</label><br>
+        <input type="number" id="points" name="points" step="3"><br><br>
+        <input type="submit">
+        <input type="submit" formaction="action_page2.php" formtarget="_blank">
+        
+
+    </form> 
+</body>
+</html>
